@@ -67,7 +67,7 @@ let greetCustomer = () => {
   });
 };
 
-function continueShopping() {
+let continueShopping = () => {
   inquirer.prompt([
     {
       type: 'input',
@@ -78,7 +78,7 @@ function continueShopping() {
     if (answer.continue.toLowerCase() === 'y') {
       greetCustomer();
     } else {
-      console.log('\nThanks for shopping at BAMAZON, the adventurer\'s one stop shop!\n');
+      console.log('\nShopkeeper: Thanks for shopping at BAMAZON, the adventurer\'s one stop shop!\n');
       connection.end();
     }
   });
