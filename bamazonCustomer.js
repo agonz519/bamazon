@@ -1,6 +1,5 @@
 require('dotenv').config();
 const mysql = require('mysql');
-const cTable = require('console.table');
 const inquirer = require('inquirer');
 
 const connection = mysql.createConnection({
@@ -15,7 +14,6 @@ connection.connect(function(error) {
   if (error) throw 'An error has occurred while connecting - ' + error;
   console.log('connected as id ' + connection.threadId);
   greetCustomer();
-
 });
 
 let queryItemsForSale = new Promise((resolve, reject) => {
@@ -82,4 +80,4 @@ let continueShopping = () => {
       connection.end();
     }
   });
-}
+};
